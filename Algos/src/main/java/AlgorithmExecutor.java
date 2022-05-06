@@ -5,7 +5,8 @@ public class AlgorithmExecutor {
     public static void main(String[] args) {
         // executeMinMaxSum();
         // executeTimeConverter();
-        executeReverseLinkedList();
+        // executeReverseLinkedList();
+        executeRecursions();
     }
 
     private static void executeMinMaxSum() {
@@ -43,5 +44,11 @@ public class AlgorithmExecutor {
         // LinkedList.Node node = linkedList.reverse(linkedList.getHead());
         linkedList.removeUnsortedDuplicates(linkedList.getHead());
         linkedList.printList(linkedList.getHead());
+    }
+
+    private static void executeRecursions() {
+        Recursions recursions = new Recursions();
+        System.out.println(recursions.getFibonacciNumber(5));
+        System.out.println(recursions.getFactorial(5));
     }
 }
