@@ -6,7 +6,10 @@ public class AlgorithmExecutor {
         // executeMinMaxSum();
         // executeTimeConverter();
         // executeReverseLinkedList();
-        executeRecursions();
+        // executeRecursions();
+        // executeHashMapImplementation();
+        // executeSelectionSort();
+        executeQueueBasedStack();
     }
 
     private static void executeMinMaxSum() {
@@ -50,5 +53,34 @@ public class AlgorithmExecutor {
         Recursions recursions = new Recursions();
         System.out.println(recursions.getFibonacciNumber(5));
         System.out.println(recursions.getFactorial(5));
+    }
+
+    private static void executeHashMapImplementation() {
+        HashMapImpl<String, Integer> integerHashMap = new HashMapImpl<>();
+        integerHashMap.put("USA", 1);
+        integerHashMap.put("Nepal", 2);
+        integerHashMap.put("India", 3);
+        integerHashMap.put("Australia", 4);
+
+        System.out.println(integerHashMap.get("USA"));
+    }
+
+    private static void executeSelectionSort() {
+        SelectionSort selectionSort = new SelectionSort();
+        int arr[] = {64, 25, 12, 22, 11};
+        selectionSort.sort(arr);
+        System.out.println("Sorted array");
+        selectionSort.printArray(arr);
+    }
+
+    private static void executeQueueBasedStack() {
+        QueueBasedStack queueBasedStack = new QueueBasedStack();
+        queueBasedStack.push(10);
+        queueBasedStack.push(20);
+        System.out.println("Top element :" + queueBasedStack.top());
+        queueBasedStack.pop();
+        queueBasedStack.push(30);
+        queueBasedStack.pop();
+        System.out.println("Top element :" + queueBasedStack.top());
     }
 }
